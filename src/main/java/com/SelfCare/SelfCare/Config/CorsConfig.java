@@ -14,7 +14,7 @@ public class CorsConfig {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("http://localhost:8082","http://127.0.0.1:5173","http://localhost:8080","http://159.223.184.200:8082","http://159.223.184.200")
+						.allowedOrigins("http://localhost:8082","http://127.0.0.1:5173","http://localhost:8080","http://159.223.184.200:8082","https://go-eat.onrender.com/")
 						.allowedMethods("*")
 				;
 			}
