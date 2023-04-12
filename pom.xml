@@ -48,7 +48,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<!-- Maven Plugin to dowload and install node and npm in this project -->
 	<build>
 		<finalName>SetfCare</finalName>
 		<plugins>
