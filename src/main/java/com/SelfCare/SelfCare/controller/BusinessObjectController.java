@@ -32,7 +32,7 @@ public class BusinessObjectController {
 		this.businessObjectService=businessObjectService;
 	}
 	
-	@PostMapping("/getbusinessobject")
+	@PostMapping("/save")
 	public ResponseEntity<?> getBusinessObject(@RequestBody BusObjectResquestDTO params) throws Exception{
 		Map response= new HashMap<String, String>();
 		try {
