@@ -23,8 +23,12 @@ public class BusinessObjectRepository {
 		StringBuilder sql = new StringBuilder();
 		List<Object[]> object = new ArrayList<Object[]>();
 		
+		String code=( params.containsKey("code") ? " and barcode  like '%"+params.get("code").toString()+"%'" :" ");
+		
 		try {
-			sql.append("SELECT * FROM product where name like '%"+(params.containsKey("name")? params.get("name").toString().toLowerCase().replaceAll("[\\+\\-\\.\\^:,ï¿½\\s]","%"):"")+"%' ORDER BY id DESC");
+			sql.append("SELECT * FROM product where name like '%"+(params.containsKey("name")? params.get("name").toString().toLowerCase().replaceAll("[\\+\\-\\.\\^:,ï¿½\\s]","%"):"")+"%'"
+					+code
+					+ " ORDER BY id DESC");
 			object = entityManager.createNativeQuery(sql.toString()).getResultList();
 			
 		} catch (Exception e) {
