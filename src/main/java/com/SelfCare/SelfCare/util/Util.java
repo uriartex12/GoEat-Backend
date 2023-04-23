@@ -18,6 +18,7 @@ public class Util {
 		 	}
 		 	String hashString = hashBuilder.toString();
 		 	return hashString;
+
 	 }
 	 
 	 public static void responsePaginated(Map response,int total, Map params) {
@@ -26,9 +27,11 @@ public class Util {
 			response.put("xpagina", Integer.parseInt(params.get("xpagina").toString()));
 			response.put("pagina", Integer.parseInt(params.get("pagina").toString()));
 			//return response;
+
 	 }
 		
      public static int resolveLimit(Map map) {
 			return (Integer.parseInt(map.get("pagina").toString())-1)*Integer.parseInt(map.get("xpagina").toString());
+
      }
 }
